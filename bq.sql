@@ -43,7 +43,7 @@ with rs_sgccr AS
   WHEN left(fiscper,3) IN ("010", "011", "012") THEN CONCAT("FY", RIGHT(fiscper,2)," Q4")
   END AS `FY Q`
 
-  FROM `prd-65343-datalake-bd-88394358.mssfinsapbw_109534_in.109534_mssfin_revenue_metrics_sapbw_in`
+  FROM ---confidential
   WHERE `zindtry_desc` <> "" AND `industry_group_lgtext` <> "" AND curtype = "20"
   GROUP BY ALL),
 
